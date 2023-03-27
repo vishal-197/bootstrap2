@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  </head>
+  <style>
+    .navbar-nav.mb-2.mb-lg-0 {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    }
+    header{
+        /* position: fixed;
+        z-index: 1;
+    width: 100%; */
+        background: #212529;
+    }
+    .log{
+        color: #fff;
+    }
+    ul.navbar-nav li a {
+    color: #ccc;
+    }
+    .hero-right-div {
+    height: 100%;
+    background: grey;
+    border-radius: 5px;
+    }
+    section.hero-banner {
+    background: #212529;
+    /* height: 100vh; */
+    }
+    .hero-banner .hreo-left{
+        /* height:90vh; */
+    }
+    .card-body i {
+    color: white;
+    font-size: 33px;
+    padding: 3px 12px;
+    background: #0c64e7;
+    border-radius: 5px;
+    }
+    span.user-dp {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;    
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 15px;
+
+}
+h5.text-center {
+    display: flex;
+    align-items: center;
+}
+.span-h5color{
+    color: #0c64e7;
+}
+span.user-dp img {
+    width: 100%;
+    height: 100%;
+}
+.card-footer-img.me-4 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+footer ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+footer ul li a {
+  color: #fff
+}
+footer ul {
+   margin: 0px;
+   padding: 0px;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: rgb(255 248 248);
+}
+.nav-link:focus, .nav-link:hover {
+    color: rgb(255 248 248);
+}
+header ul.dropdown-menu.show li a {
+    color: #000;
+} 
+header a.dropdown-item:hover {
+    background: #e5e5e5;
+}
+
+@media (max-width: 768px) {
+    .hreo-left{
+
+        margin-top: 40px;
+    }
+    section#newsletter div.d-flex {
+    flex-wrap: wrap;
+    }
+    .newsletter-left-side {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    }
+    .newsletter-right-side {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 40px;
+    }
+    .p-5 {
+    padding: 2rem!important;
+    }
+    
+    }
+
+    @media (max-width: 425px){
+    .p-5 {
+    padding: 1rem!important;
+    }
+    .pt-5 {
+    padding-top: 1.5rem!important;
+    }
+    .pb-5 {
+    padding-bottom: 1.5rem!important;
+    }
+    .newsletter-right-side {
+    width: 90%;
+    }
+    }
+
+  </style>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <div class="log">
+                    Bootstrap
+                </div>
+              </a>
+              <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="bi bi-list text-white fs-1 fw-bold"></i></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">FAQ</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Blog
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Blog Home</a></li>
+                      <li><a class="dropdown-item" href="#">Blog Post</a></li>          
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Portfolio
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Portfolio Overview</a></li>
+                        <li><a class="dropdown-item" href="#">Portfolio Item</a></li>   
+                    </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <!-- header closed -->
+
+    <section class="hero-banner">
+        <div class="container">
+            <div class="row p-5 ">
+                <div class="col-lg-6 col-md-12   order-lg-0 order-2 hreo-left d-flex">
+                    <div class="align-self-center">
+                                       <h1 class="fs1 fw-bold text-white mb-2">A Bootstrap 5 template form modern businesses</h1>
+                                       <p class="text-white pb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                       <button type="button" class="btn btn-primary btn-lg me-4 mb-3">Get Started</button>
+                                       <button type="button" class="btn btn-dark btn-lg border-white mb-3">Learn More</button>
+                                      
+                                       
+                    </div>
+                               </div>
+                <div class="col-lg-5 col-md-12  order-md-1 d-flex hreo-right offset-lg-1">
+                    <div class="align-self-center">
+
+                        <img src="https://dummyimage.com/600x400/343a40/6c757d" alt="" class="img-fluid">
+                    </div>
+                   </div>
+                </div>
+               </div>
+        </div>
+    </section>
+
+    <section class="pt-5 pb-5">
+        <div class="container pt-5 pb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-12 text-center mb-5">
+                    <div>
+                        <h1>A better way to start building.</h1>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 ">
+                    <div class="row">
+                        <div class=" col-md-6 mb-4"><div class="card shadow border-0" >          
+                            <div class="card-body">
+                                <i class="bi bi-collection"></i>
+                              <h5 class="card-title mt-3">Featured title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4"><div class="card shadow border-0" >                   
+                            <div class="card-body">
+                                <i class="bi bi-building"></i>
+                                <h5 class="card-title mt-3">Featured title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>                           
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4"><div class="card shadow border-0" >
+                            
+                            <div class="card-body">
+                                <i class="bi bi-toggles2"></i>
+                                <h5 class="card-title mt-3">Featured title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>                 
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card shadow border-0" >
+                            
+                            <div class="card-body">
+                                <i class="bi bi-toggles2"></i>
+                                <h5 class="card-title mt-3">Featured title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-5 pb-5 bg-light">
+        <div class="container pt-5 pb-5"> 
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <h3 class="text-center fw-normal">"Working with Start Bootstrap templates has saved me tons of development time when building new projects! Starting with a Bootstrap template just makes things easier!"</h6>
+                    <div class="text-center mt-3">
+                        <h5 class="text-center justify-content-center mt-3 fw-bold"> 
+                            <span class="user-dp"><img src="https://dummyimage.com/40x40/ced4da/6c757d" alt=""> </span> Tom Ato  <span class="span-h5color pe-1 ms-1"> / </span>  CEO, Pomodoro</h5>
+                    </div>
+
+                </div>
+            </div>
+            <div class="fs-6 "> </div>
+        </div>
+    </section>
+
+    <section id="blog-section" class="pt-5 pb-5">
+        <div class="container pt-5 pb-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 col-lg-6 text-center">
+                    <h2 class="fw-bold">form our blog</h2>
+                    <p class="fs-5 mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque fugit ratione dicta mollitia. Officiis ad.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card h-100 shadow border-0">
+                        <img src="https://dummyimage.com/600x350/ced4da/6c757d" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="badge text-bg-primary">New</span>
+                          <h5 class="card-title mt-2">Blog post title</h5>
+                          <p class="card-text mt-3">Sone quick example text to build on the card title and make up the card's content.</p>
+                      
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex">
+                                <div class="card-footer-img me-4">
+                                    <img src="https://dummyimage.com/40x40/ced4da/6c757d" alt="">
+                                </div>
+                                <div class="card-footer-text">
+                                    <small class="fw-bold d-block">Kelly Rowan</small>
+                                    <small>March 12, 2023.  6 min read </small>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card h-100 shadow border-0">
+                    <img src="https://dummyimage.com/600x350/ced4da/6c757d" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <span class="badge text-bg-primary">Media</span>
+                      <h5 class="card-title mt-2">Another Blog post title</h5>
+                      <p class="card-text mt-3">This text is bit longer to illustrate the adaptive height of each card. Some quick example text to build on the card title and make up the card's content.</p>              
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex">
+                            <div class="card-footer-img me-4">
+                                <img src="https://dummyimage.com/40x40/ced4da/6c757d" alt="">
+                            </div>
+                            <div class="card-footer-text">
+                                <small class="fw-bold d-block">Kelly Rowan</small>
+                                <small>March 12, 2023.  6 min read </small>
+                            </div>
+                        </div>
+                    
+                       
+                    </div> 
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card h-100 shadow border-0">
+                <img src="https://dummyimage.com/600x350/ced4da/6c757d" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <span class="badge text-bg-primary">New</span>
+                  <h5 class="card-title mt-2">The last blog post title is a little bit longer than the others</h5>
+                  <p class="card-text mt-3">Some more quick example text to build on the card title and make up the card's content.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex">
+                        <div class="card-footer-img me-4">
+                            <img src="https://dummyimage.com/40x40/ced4da/6c757d" alt="">
+                        </div>
+                        <div class="card-footer-text">
+                            <small class="fw-bold d-block">Evelyn Martinez</small>
+                            <small>March 12, 2023.  6 min read </small>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="newsletter" class=" pb-5">
+    <div class="container">
+        <div class="row row p-5 rounded bg-primary bg-gradient">
+            <div class="d-flex  justify-content-between">
+                <div class="newsletter-left-side">
+                    <h2 class="fw-bold text-white">New products, delivered to you.</h2>
+                    <p class="text-white">Sign up for our newsletter for the latest updates.</p>
+                </div>
+                <div class="newsletter-right-side">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control border-white" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <button type="button" class="btn btn-primary border-white">Primary</button>
+                          </div>
+                    <small class="text-white">We care about privacy, and will never share your data.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="mt-5 bg-dark p-4">
+    <div class="container">
+        <div class="d-flex  justify-content-between">
+            <span class="text-white">copyright &copy Your Website 2023</span>
+            <ul>
+                <li>
+                    <a href="#">privacy</a>
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  </body>
+</html>
